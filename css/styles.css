@@ -8,11 +8,201 @@ h1, h2 {
     font-family: 'Fredoka One', cursive;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
 p, a, button {
     font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    line-height: 2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 body {
     display: grid;
     grid-template-columns: repeat(1, 1vf);
+}
+
+button {
+    width: 90%;
+    background: #b5e5ff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 50px;
+    font-size: 1.7rem;
+}
+
+/* Header */
+
+header {
+    background: darkblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
+.logo {
+    margin-left: 0.7rem;
+}
+
+/* Header Menu */
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+header label {
+    margin-right: 0.7rem;
+    font-size: 3rem;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.header--menu__wrapper {
+    visibility: hidden;
+    width: 100vw;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #ffffff;
+    list-style: none;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.header--menu__wrapper li {
+    margin: 1rem 0;
+}
+
+.mobile-menu:checked ~ .header--menu__wrapper {
+    visibility: visible;
+}
+
+/* Main box */
+
+.main--wrapper p, .main--wrapper h1 {
+    max-width: 80%;
+}
+
+.hometop--leftbox, .about, .howwork, .appflow {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Home top box */
+
+.hometop {
+    background: #ffb6f9;
+}
+
+.hometop--desktop__img {
+    display: none;
+}
+
+.about {
+    background: #a093ff;
+}
+
+.howwork {
+    background: #b5e5ff;
+}
+
+/* App flow box */
+
+.appflow {
+    background: #d4fde7;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.appflow--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    background: darkblue;
+}
+
+/* Desktop version */
+@media screen and (min-width: 720px) {
+    /* Menu */
+    .logo-menu {
+        width: auto;
+    }
+    .logo-menu label {
+        display: none;
+    }
+
+    .header--menu__wrapper {
+        visibility: visible;
+        flex-direction: row;
+        position: static;
+        top: none;
+        left: none;
+        padding-bottom: 0;
+        font-size: 1.5rem;
+        width: auto;
+        background: none;
+    }
+
+    .header--menu__wrapper li {
+        padding: 0 1.5rem;
+    }
+
+    /* Main box */
+    /*Home top box */
+    .hometop {
+        display: grid;
+        grid-template-columns: repeat(2, 50%)
+    }
+
+    .hometop--leftbox {
+        justify-content: center;
+    }
+
+    .hometop--mobile__img {
+        display: none;
+    }
+
+    .hometop--desktop__img {
+        display: block;
+        width: 100%;
+    }
 }

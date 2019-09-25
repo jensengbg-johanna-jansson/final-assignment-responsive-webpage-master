@@ -3,37 +3,80 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Montserrat&display=swap" rel="stylesheet">
         <title> Tubby </title>
     </head>
 <body>
     <header>
-        <nav>
-            
+        <div class="logo-menu">
+            <h1 class="logo">LoGo</h1>
+            <label for="mobile-menu">&#9776;</label>    
+        </div>
+        <nav class="header--menu">
+            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
+
+            <ul class="header--menu__wrapper">
+                <li><a href="#home-link">Home</a></li>
+                <li><a href="#about-link">About</a></li>
+                <li><a href="#howwork-link">How it works</a></li>
+                <li><a href="#appflow-link">App flow</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section class="start">
-            <h1></h1>
-            <p></p>
+    <main class="main--wrapper">
+        <section class="hometop" id="home-link">
+            <div class="hometop--leftbox">
+                <h1 class="hometop--left">Lorem ipsum dolor et sit</h1>
+                <p class="hometop--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer augue metus, finibus eget porttitor ac, tempor sed 
+                    lectus.</p>
+                
+                <img src="img/appview_mobile.png" alt="appview" class="hometop--mobile__img">
+                
+                <button class="hometop--left">Get App Now!</button>       
+            </div>
 
-            <button>Get App Now!</button>
+            <img src="img/appview_large.png" alt="appview" class="hometop--desktop__img">
         </section>
-        <section class="about">
-            <h1></h1>
-            <p></p>
+        <section class="about" id="about-link">
+            <h1>About Tubby</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Integer augue metus, finibus eget porttitor ac, tempor sed 
+                lectus. Nunc justo dolor, finibus quis nulla a, blandit 
+                posuere nunc. Etiam vulputate tempor enim, sed consectetur 
+                turpis tristique vitae. Donec rutrum tincidunt tristique.</p>
         </section>
-        <section class="howwork">
-            <h1></h1>
+        <section class="howwork" id="howwork-link">
+            <h1>How it works</h1>
+            <iframe src="https://www.youtube.com/embed/2H9ouI3gxDA" class="howwork--video"></iframe>
 
         </section>
-        <section class="appflow">
-
+        <section class="appflow" id="appflow-link">
+            <article class="appflow--item"><h1>App flow</h1></article>
+            <article class="appflow--item">
+                <h2>Get the hardware</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="appflow--item">
+                <h2>Install the hardware</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="appflow--item">
+                <h2>Download the app</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="appflow--item">
+                <h2>Connect to Tubby</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article class="appflow--item">
+                <h2>Enjoy your bath!</h2>
+            </article>
         </section>
     </main>
     <footer>
-
+        <p>&copy; Tubby Inc.</p>
     </footer>
 </body>
 </html>
