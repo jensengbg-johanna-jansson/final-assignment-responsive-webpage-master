@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+h1, h2 {
+    font-family: 'Fredoka One', cursive;
+}
+
+p, a, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(1, 1vf);
+}
