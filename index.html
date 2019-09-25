@@ -9,10 +9,10 @@
     </head>
 <body>
     <header>
-        <div class="logo-menu">
+        <article class="logo-menu">
             <h1 class="logo">LoGo</h1>
             <label for="mobile-menu">&#9776;</label>    
-        </div>
+        </article>
         <nav class="header--menu">
             <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
 
@@ -25,27 +25,31 @@
         </nav>
     </header>
     <main class="main--wrapper">
-        <section class="hometop" id="home-link">
-            <div class="hometop--leftbox">
-                <h1 class="hometop--left">Lorem ipsum dolor et sit</h1>
-                <p class="hometop--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Integer augue metus, finibus eget porttitor ac, tempor sed 
-                    lectus.</p>
-                
-                <img src="img/appview_mobile.png" alt="appview" class="hometop--mobile__img">
-                
-                <button class="hometop--left">Get App Now!</button>       
+        <section class="home--wrapper" id="home-link">
+            <div class="home--container">
+                <article class="hometop--leftbox">
+                    <h1 class="hometop--left">Lorem ipsum dolor et sit</h1>
+                    <p class="hometop--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer augue metus, finibus eget porttitor ac, tempor sed 
+                        lectus.</p>
+                    
+                    <img src="img/appview_mobile.png" alt="appview" class="hometop--mobile__img">
+                    
+                    <button class="hometop--left">Get App Now!</button>       
+                </article>
+                <img src="img/appview_large.png" alt="appview" class="hometop--desktop__img">
             </div>
-
-            <img src="img/appview_large.png" alt="appview" class="hometop--desktop__img">
         </section>
         <section class="about" id="about-link">
-            <h1>About Tubby</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Integer augue metus, finibus eget porttitor ac, tempor sed 
-                lectus. Nunc justo dolor, finibus quis nulla a, blandit 
-                posuere nunc. Etiam vulputate tempor enim, sed consectetur 
-                turpis tristique vitae. Donec rutrum tincidunt tristique.</p>
+            <img src="img/undraw_a_moment_to_relax_bbpa.png" alt="" class="about--img"> 
+            <article class="about--rightbox">
+                <h1>About Tubby</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer augue metus, finibus eget porttitor ac, tempor sed 
+                    lectus. Nunc justo dolor, finibus quis nulla a, blandit 
+                    posuere nunc. Etiam vulputate tempor enim, sed consectetur 
+                    turpis tristique vitae. Donec rutrum tincidunt tristique.</p> 
+            </article>
         </section>
         <section class="howwork" id="howwork-link">
             <h1>How it works</h1>
@@ -69,6 +73,7 @@
             <article class="appflow--item">
                 <h2>Connect to Tubby</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">See how now</a>
             </article>
             <article class="appflow--item">
                 <h2>Enjoy your bath!</h2>

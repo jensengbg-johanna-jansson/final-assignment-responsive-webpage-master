@@ -16,7 +16,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-p, a, button {
+p, a, button, label {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,13 +25,13 @@ p {
 }
 
 a {
-    color: black;
     text-decoration: none;
+    color: #a093ff;
 }
 
 body {
     display: grid;
-    grid-template-columns: repeat(1, 1vf);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 button {
@@ -74,6 +74,7 @@ header {
 header label {
     margin-right: 0.7rem;
     font-size: 3rem;
+    color: #000000;
 }
 
 .mobile-menu {
@@ -101,17 +102,20 @@ header label {
     margin: 1rem 0;
 }
 
+.header--menu__wrapper li a {
+    color: #000000;
+}
+
 .mobile-menu:checked ~ .header--menu__wrapper {
     visibility: visible;
 }
 
 /* Main box */
-
-.main--wrapper p, .main--wrapper h1 {
-    max-width: 80%;
+.main--wrapper section {
+    padding: 0 3rem;
 }
 
-.hometop--leftbox, .about, .howwork, .appflow {
+.hometop--leftbox, .about--rightbox, .howwork, .appflow, .contact, .contact--form {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -120,8 +124,7 @@ header label {
 }
 
 /* Home top box */
-
-.hometop {
+.home--wrapper {
     background: #ffb6f9;
 }
 
@@ -131,6 +134,10 @@ header label {
 
 .about {
     background: #a093ff;
+}
+
+.about--img {
+    display: none;
 }
 
 .howwork {
@@ -143,7 +150,11 @@ header label {
     background: #d4fde7;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section.appflow {
+    padding: 0;
 }
 
 .appflow--item {
@@ -158,6 +169,23 @@ header label {
 
 footer {
     background: darkblue;
+}
+
+/* CONTACT PAGE */
+.contact--form {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact--form label {
+    margin: 2rem 0 0.5rem 0;
+}
+
+.contact--form input, .contact--form textarea {
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
 }
 
 /* Desktop version */
@@ -187,14 +215,29 @@ footer {
     }
 
     /* Main box */
-    /*Home top box */
-    .hometop {
+    .home--container, .about {
         display: grid;
-        grid-template-columns: repeat(2, 50%)
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 
+    /* Home box */
+    .home--wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .home--container {
+        max-width: 800px;
+    }
+    
     .hometop--leftbox {
         justify-content: center;
+        margin-right: 2rem;
+    }
+
+    .hometop--leftbox p, .about--rightbox p {
+        margin: 3rem 0;
     }
 
     .hometop--mobile__img {
@@ -204,5 +247,24 @@ footer {
     .hometop--desktop__img {
         display: block;
         width: 100%;
+        margin-left: 2rem;
     }
+
+    /* About box */
+    .about--rightbox {
+        justify-content: center;
+    }
+    .about--img {
+        width: 100%;
+    }
+
+    .howwork {
+        flex-direction: row;
+    }
+
+    /* App flow box */
+    .appflow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
 }
