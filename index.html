@@ -9,20 +9,23 @@
     </head>
 <body>
     <header>
-        <article class="logo-menu">
-            <h1 class="logo">LoGo</h1>
-            <label for="mobile-menu">&#9776;</label>    
-        </article>
-        <nav class="header--menu">
-            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
-
-            <ul class="header--menu__wrapper">
-                <li><a href="#home-link">Home</a></li>
-                <li><a href="#about-link">About</a></li>
-                <li><a href="#howwork-link">How it works</a></li>
-                <li><a href="#appflow-link">App flow</a></li>
-            </ul>
-        </nav>
+        <div class="header--wrapper">
+            <article class="logo-menu">
+                <h1 class="logo">LoGo</h1>
+                <label for="mobile-menu">&#9776;</label>    
+            </article>
+            <nav class="header--menu">
+                <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
+    
+                <ul class="header--menu__wrapper">
+                    <li><a href="#home-link">Home</a></li>
+                    <li><a href="#about-link">About</a></li>
+                    <li><a href="#howwork-link">How it works</a></li>
+                    <li><a href="#appflow-link">App flow</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main--wrapper">
         <section class="home--wrapper" id="home-link">
@@ -40,44 +43,48 @@
                 <img src="img/appview_large.png" alt="appview" class="hometop--desktop__img">
             </div>
         </section>
-        <section class="about" id="about-link">
-            <img src="img/undraw_a_moment_to_relax_bbpa.png" alt="" class="about--img"> 
-            <article class="about--rightbox">
-                <h1>About Tubby</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Integer augue metus, finibus eget porttitor ac, tempor sed 
-                    lectus. Nunc justo dolor, finibus quis nulla a, blandit 
-                    posuere nunc. Etiam vulputate tempor enim, sed consectetur 
-                    turpis tristique vitae. Donec rutrum tincidunt tristique.</p> 
-            </article>
+        <section class="about--wrapper" id="about-link">
+            <div class="about--container"> 
+                <img src="img/undraw_a_moment_to_relax_bbpa.png" alt="" class="about--img">
+                <article class="about--rightbox">
+                    <h1>About Tubby</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Integer augue metus, finibus eget porttitor ac, tempor sed 
+                        lectus. Nunc justo dolor, finibus quis nulla a, blandit 
+                        posuere nunc. Etiam vulputate tempor enim, sed consectetur 
+                        turpis tristique vitae. Donec rutrum tincidunt tristique.</p> 
+                </article>
+            </div>
         </section>
         <section class="howwork" id="howwork-link">
             <h1>How it works</h1>
             <iframe src="https://www.youtube.com/embed/2H9ouI3gxDA" class="howwork--video"></iframe>
 
         </section>
-        <section class="appflow" id="appflow-link">
-            <article class="appflow--item"><h1>App flow</h1></article>
-            <article class="appflow--item">
-                <h2>Get the hardware</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </article>
-            <article class="appflow--item">
-                <h2>Install the hardware</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </article>
-            <article class="appflow--item">
-                <h2>Download the app</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </article>
-            <article class="appflow--item">
-                <h2>Connect to Tubby</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#">See how now</a>
-            </article>
-            <article class="appflow--item">
-                <h2>Enjoy your bath!</h2>
-            </article>
+        <section class="appflow--wrapper" id="appflow-link">
+            <div class="appflow--container">
+                <article class="appflow--item"><h1>App flow</h1></article>
+                <article class="appflow--item">
+                    <h2>Get the hardware</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="appflow--item">
+                    <h2>Install the hardware</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="appflow--item">
+                    <h2>Download the app</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="appflow--item">
+                    <h2>Connect to Tubby</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">See how now</a>
+                </article>
+                <article class="appflow--item">
+                    <h2>Enjoy your bath!</h2>
+                </article>       
+            </div>
         </section>
     </main>
     <footer>
