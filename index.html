@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/dfc5fca1d3.js" crossorigin="anonymous"></script>
         <title> Tubby </title>
     </head>
 <body>
-    <header>
+    <header data-scrollery id="menu">
         <div class="header--wrapper">
             <article class="logo-menu">
-                <h1 class="logo">LoGo</h1>
+                <h1 class="logo heading_white">Tubby</h1>
                 <label for="mobile-menu">&#9776;</label>    
             </article>
             <nav class="header--menu">
@@ -21,7 +22,7 @@
                     <li><a href="#home-link">Home</a></li>
                     <li><a href="#about-link">About</a></li>
                     <li><a href="#howwork-link">How it works</a></li>
-                    <li><a href="#appflow-link">App flow</a></li>
+                    <li><a href="#connect-link">Connect</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -31,64 +32,120 @@
         <section class="home--wrapper" id="home-link">
             <div class="home--container">
                 <article class="hometop--leftbox">
-                    <h1 class="hometop--left">Lorem ipsum dolor et sit</h1>
-                    <p class="hometop--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <h1 class="heading_white hometop__heading">Lorem ipsum dolor et sit</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Integer augue metus, finibus eget porttitor ac, tempor sed 
                         lectus.</p>
                     
                     <img src="img/appview_mobile.png" alt="appview" class="hometop--mobile__img">
                     
-                    <button class="hometop--left">Get App Now!</button>       
+                    <button class="btn--unfilled">
+                        <span class="btn--unfilled__toplayer">
+                           <span>Get It Now!</span>
+                        </span>
+                    </button>       
                 </article>
                 <img src="img/appview_large.png" alt="appview" class="hometop--desktop__img">
             </div>
         </section>
         <section class="about--wrapper" id="about-link">
             <div class="about--container"> 
-                <img src="img/undraw_a_moment_to_relax_bbpa.png" alt="" class="about--img">
+                <img src="img/undraw_a_moment_to_relax_bbpa.png" alt="" class="about__img">
                 <article class="about--rightbox">
                     <h1>About Tubby</h1>
+                    <img src="img/undraw_a_moment_to_relax_bbpa_mobile.png" alt="" class="about__imgMobile">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Integer augue metus, finibus eget porttitor ac, tempor sed 
-                        lectus. Nunc justo dolor, finibus quis nulla a, blandit 
-                        posuere nunc. Etiam vulputate tempor enim, sed consectetur 
-                        turpis tristique vitae. Donec rutrum tincidunt tristique.</p> 
+                        Nulla sed aliquet enim, ac feugiat libero. Sed sit amet 
+                        gravida magna. Nunc condimentum convallis urna, vel 
+                        sollicitudin dolor fermentum ac. Donec sed eleifend justo. 
+                        Vestibulum ornare mauris justo, sed pretium nulla 
+                        ullamcorper at. Etiam pulvinar cursus lorem nec iaculis. 
+                        Etiam ac ex metus.</p>
                 </article>
             </div>
         </section>
-        <section class="howwork" id="howwork-link">
-            <h1>How it works</h1>
-            <iframe src="https://www.youtube.com/embed/2H9ouI3gxDA" class="howwork--video"></iframe>
-
-        </section>
-        <section class="appflow--wrapper" id="appflow-link">
-            <div class="appflow--container">
-                <article class="appflow--item"><h1>App flow</h1></article>
-                <article class="appflow--item">
-                    <h2>Get the hardware</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <section class="howwork--wrapper" id="howwork-link">
+            <div class="howwork--container">
+                <article class="howwork--leftbox">
+                    <h1>How it works</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Quisque quis odio neque. Vestibulum auctor placerat malesuada.
+                        Fusce et pretium neque. Cras sed augue iaculis, consectetur 
+                        elit vel, aliquam metus. Vestibulum eu metus metus. Maecenas
+                        ultricies tortor quis libero dignissim, sed vehicula mauris 
+                        molestie.</p>
                 </article>
-                <article class="appflow--item">
+                <div class="howwork--videoContainer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2H9ouI3gxDA?controls=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="connect--wrapper" id="connect-link">
+            <div class="connect--container">
+                <article class="connect--item"><h1>How to Connect Tubby</h1></article>
+                <article class="connect--item">
+                    <i class="fas fa-store connect__icon"></i>
+                    <h2>Get the hardware</h2>
+                    <a href="">Find your closest reseller</a>
+                </article>
+                <article class="connect--item">
+                    <i class="fas fa-tools connect__icon"></i>
                     <h2>Install the hardware</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </article>
-                <article class="appflow--item">
+                <article class="connect--item">
+                    <i class="fas fa-cloud-download-alt connect__icon"></i>
                     <h2>Download the app</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Get the Tubby app for free for your iOS or Android device.</p>
                 </article>
-                <article class="appflow--item">
+                <article class="connect--item">
+                    <i class="fas fa-wifi connect__icon"></i>
                     <h2>Connect to Tubby</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Connect the app to the Tubby hardware through your wifi.</p>
                     <a href="#">See how now</a>
                 </article>
-                <article class="appflow--item">
+                <article class="connect--item">
+                    <i class="fas fa-hot-tub connect__icon"></i>
                     <h2>Enjoy your bath!</h2>
                 </article>       
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; Tubby Inc.</p>
+    <footer class="footer--wrapper">
+        <div class="footer--container">
+            <section class="footer--appdownload">
+                <h2>Get Tubby for iOS and Android for free</h2>
+                <img src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" class="footer--appdownload__iOSimg" alt="appstore">
+                <img src="img/google-play-badge.png" alt="playstore">        
+            </section>
+
+            <nav class="footer--menu">
+                <section class="footer-menu--companylinks">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>        
+                </section>
+                <section class="footer--menu--supportlinks">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Guides & Tutorials</a></li>
+                    </ul>        
+                </section>
+            </nav>
+            <section class="footer--socialmedia">
+                <h2>Follow Us</h2>
+                <div class="footer--socialmedia__icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>        
+                </div>        
+            </section>
+            <p class="footer--copyright">&copy; Tubby. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
