@@ -5,41 +5,93 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/dfc5fca1d3.js" crossorigin="anonymous"></script>
         <title> Tubby </title>
     </head>
 <body>
     <header>
-        <article class="logo-menu">
-            <h1 class="logo">LoGo</h1>
-            <label for="mobile-menu">&#9776;</label>    
-        </article>
-        <nav class="header--menu">
-            <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
-
-            <ul class="header--menu__wrapper">
-                <li><a href="#home-link">Home</a></li>
-                <li><a href="#about-link">About</a></li>
-                <li><a href="#howwork-link">How it works</a></li>
-                <li><a href="#appflow-link">App flow</a></li>
-            </ul>
-        </nav>
+        <div class="header--wrapper">
+            <article class="logo-menu">
+                <h1 class="logo heading_white">Tubby</h1>
+                <label for="mobile-menu">&#9776;</label>    
+            </article>
+            <nav class="header--menu">
+                <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
+    
+                <ul class="header--menu__wrapper">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-link">About</a></li>
+                    <li><a href="index.html#howwork-link">How it works</a></li>
+                    <li><a href="index.html#connect-link">Connect</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main--wrapper">
-        <section class="contact">
-            <h1>Contact Us</h1>
-        </section>
-        <section class="contact--form">
-            <label for="contact--namne">Your Name</label>
-            <input type="text" name="contact--name" class="contact--name">
-            <label for="contact--email">Your Email</label>
-            <input type="text" name="contact--email" class="contact--email">
-            <label for="contact--message">Your Message</label>
-            <textarea name="contact--message" class="contact--message"></textarea>
-            <button>Send Message</button>
-        </section>
+        <div class="contact--wrapper">
+            <section class="contact--form">
+                <h1>Send us a message</h1>
+                <label>Your Name</label>
+                <input type="text" name="contact--name" class="contact--name">
+                <label>Your Email</label>
+                <input type="text" name="contact--email" class="contact--email">
+                <label>Your Message</label>
+                <textarea name="contact--message" class="contact--message"></textarea>
+                <button class="btn--unfilled">
+                        <span class="btn--unfilled__toplayer">
+                           <span>Send Message</span>
+                        </span>
+                    </button> 
+            </section>
+            <div class="contact--divider">
+                <span class="contact--divider__item"><span>OR</span></span>
+            </div>
+            <section class="contact--socialmedia">
+                <h1>Find us online</h1>
+                <div class="contact--socialmedia__icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>        
+                </div>
+            </section>
+        </div>    
     </main>
-    <footer>
-        <p>&copy; Tubby Inc.</p>
+    <footer class="footer--wrapper">
+        <div class="footer--container">
+            <section class="footer--appdownload">
+                <h2>Get Tubby for iOS and Android for free</h2>
+                <img src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" class="footer--appdownload__iOSimg" alt="appstore">
+                <img src="img/google-play-badge.png" alt="playstore">        
+            </section>
+
+            <nav class="footer--menu">
+                <section class="footer-menu--companylinks">
+                    <h2>Company</h2>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>        
+                </section>
+                <section class="footer--menu--supportlinks">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Guides & Tutorials</a></li>
+                    </ul>        
+                </section>
+            </nav>
+            <section class="footer--socialmedia">
+                <h2>Follow Us</h2>
+                <div class="footer--socialmedia__icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>        
+                </div>        
+            </section>
+            <p class="footer--copyright">&copy; Tubby. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
