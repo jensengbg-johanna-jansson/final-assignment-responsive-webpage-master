@@ -9,49 +9,39 @@
         <title> Tubby </title>
     </head>
 <body>
-    <header data-scrollery id="menu">
-        <div class="header--wrapper">
-            <article class="logo-menu">
-                <h1 class="logo heading_white">Tubby</h1>
-                <label for="mobile-menu">&#9776;</label>    
-            </article>
-            <nav class="header--menu">
-                <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
-    
-                <ul class="header--menu__wrapper">
-                    <li><a href="#home-link">Home</a></li>
-                    <li><a href="#about-link">About</a></li>
-                    <li><a href="#howwork-link">How it works</a></li>
-                    <li><a href="#connect-link">Connect</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header--wrapper">
+        <h1 class="logo heading_white">Tubby</h1>
+        <label for="mobile-menu" class="header__hamburgericon">&#9776;</label>    
+        <input type="checkbox" name="mobile-menu" id="mobile-menu" class="mobile-menu">        
+
+        <nav class="header--menu">
+            <a href="#home-link">Home</a>
+            <a href="#about-link">About</a>
+            <a href="#howwork-link">How it works</a>
+            <a href="#connect-link">Connect</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
     <main class="main--wrapper">
         <section class="home--wrapper" id="home-link">
-            <div class="home--container">
-                <article class="hometop--leftbox">
-                    <h1 class="heading_white hometop__heading">Lorem ipsum dolor et sit</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Integer augue metus, finibus eget porttitor ac, tempor sed 
-                        lectus.</p>
-                    
-                    <img src="img/appview_mobile.png" alt="appview" class="hometop--mobile__img">
-                    
-                    <button class="btn--unfilled">
-                        <span class="btn--unfilled__toplayer">
-                           <span>Get It Now!</span>
-                        </span>
-                    </button>       
-                </article>
+            <article class="hometop--content">
+                <h1 class="heading_white hometop__heading">Lorem ipsum dolor et sit</h1>
+                <p class="hometop__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer augue metus, finibus eget porttitor ac, tempor sed 
+                    lectus.</p>
+                <button class="btn--unfilled hometop__btn">
+                    <span class="btn--unfilled__toplayer">
+                        <span>Get It Now!</span>
+                    </span>
+                </button> 
+                <img src="img/appview_mobile.png" alt="appview" class="hometop--mobile__img">                    
                 <img src="img/appview_large.png" alt="appview" class="hometop--desktop__img">
-            </div>
+            </article>
         </section>
-        <section class="about--wrapper" id="about-link">
-            <div class="about--container"> 
+        <div class="content--wrapper">
+            <section class="about--container" id="about-link"> 
                 <img src="img/undraw_a_moment_to_relax_bbpa.png" alt="" class="about__img">
-                <article class="about--rightbox">
+                <article class="about--content">
                     <h1>About Tubby</h1>
                     <img src="img/undraw_a_moment_to_relax_bbpa_mobile.png" alt="" class="about__imgMobile">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -62,11 +52,9 @@
                         ullamcorper at. Etiam pulvinar cursus lorem nec iaculis. 
                         Etiam ac ex metus.</p>
                 </article>
-            </div>
-        </section>
-        <section class="howwork--wrapper" id="howwork-link">
-            <div class="howwork--container">
-                <article class="howwork--leftbox">
+            </section>
+            <section class="howwork--container" id="howwork-link">
+                <article class="howwork--content">
                     <h1>How it works</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Quisque quis odio neque. Vestibulum auctor placerat malesuada.
@@ -78,10 +66,8 @@
                 <div class="howwork--videoContainer">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/2H9ouI3gxDA?controls=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-            </div>
-        </section>
-        <section class="connect--wrapper" id="connect-link">
-            <div class="connect--container">
+            </section>
+            <section class="connect--container" id="connect-link">
                 <article class="connect--item"><h1>How to Connect Tubby</h1></article>
                 <article class="connect--item">
                     <i class="fas fa-store connect__icon"></i>
@@ -108,8 +94,8 @@
                     <i class="fas fa-hot-tub connect__icon"></i>
                     <h2>Enjoy your bath!</h2>
                 </article>       
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer class="footer--wrapper">
         <div class="footer--container">

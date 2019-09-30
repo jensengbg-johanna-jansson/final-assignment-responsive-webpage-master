@@ -10,7 +10,7 @@ h1, h2 {
 
 h1 {
     font-size: 3rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     font-weight: normal;
     color: #ffb6f9;
     text-shadow: 1px 1px 0 #a093ff, 
@@ -19,13 +19,13 @@ h1 {
                 4px 4px 1px darkgray;
 }
 
-.heading_white {
-    color: #ffffff;
-    text-shadow: 1px 1px 0 #ffb6f9, 
-                2px 2px 0 #ffb6f9, 
-                3px 3px 2px #ffb6f9, 
-                4px 4px 0 #a093ff;
-}
+    .heading_white {
+        color: #ffffff;
+        text-shadow: 1px 1px 0 #ffb6f9, 
+                    2px 2px 0 #ffb6f9, 
+                    3px 3px 2px #ffb6f9, 
+                    4px 4px 0 #a093ff;
+    }
 
 h2 {
     font-size: 1.2rem;
@@ -47,11 +47,24 @@ a {
 
 body {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100vw);
     background: #ffffff;
 }
 
 /* Buttons */
+.btn--filled{
+    width: 100%;
+    background: none;
+    font-weight: bold;
+    padding: 4px;
+    margin: 1rem 0;
+    border-radius: 50px;
+    font-size: 1.7rem;
+    border: 4px solid #ffffff;
+    color: #ffffff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .btn--unfilled {
     width: 100%;
     background: linear-gradient(180deg, #ffb6f9, #a093ff);
@@ -64,12 +77,23 @@ body {
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.btn--unfilled:hover {
+    background: none;
+    color: #ffffff;
+    border: 4px solid #ffffff;
+}
+
+.btn--unfilled:hover .btn--unfilled__toplayer {
+    background: none;
+}
+
 .btn--unfilled__toplayer {
     background: #ffffff;
     width: 100%;
     border-radius: 50px;
     padding: 0.5rem 0;
     display: block;
+    border: 4px solid rgba(252, 74, 74, 0.0);
 }
 
 .btn--unfilled__toplayer span {
@@ -82,23 +106,18 @@ body {
 
 /* Header */
 
-header {
+.header--wrapper {
     background: #b5e5ff;
     height: 10vh;
+    width: 100vw;
     position: sticky;
     top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.header--wrapper {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .logo {
@@ -106,56 +125,41 @@ header {
     padding-bottom: 0;
 }
 
-/* Header Menu */
-
-.logo-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-}
-
-header label {
+.header__hamburgericon {
     margin-right: 0.7rem;
     font-size: 3rem;
     color: #ffffff;
     font-weight: bold;
 }
 
+.header--menu {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    padding: 0 2rem;
+
+    background: #b5e5ff;
+    padding-bottom: 2rem;
+    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header--menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
 .mobile-menu {
     display: none;
 }
 
-.header--menu__wrapper {
-    visibility: hidden;
-    width: 100vw;
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    padding: 0 2rem;
-
-    display: flex;
-    flex-direction: column;
-
-    background: #b5e5ff;
-    list-style: none;
-    font-size: 1.5rem;
-    padding-bottom: 2rem;
-    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2);
-
-}
-
-.header--menu__wrapper li {
-    margin: 1rem 0;
-}
-
-.header--menu__wrapper li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.mobile-menu:checked ~ .header--menu__wrapper {
+.mobile-menu:checked ~ .header--menu {
     visibility: visible;
 }
 
@@ -165,23 +169,27 @@ header label {
     flex-direction: column;
 }
 
-.main--wrapper section {
+.home--wrapper, .about--container, .howwork--container, .contact--wrapper {
     padding: 2rem 2rem;
+}
+
+.connect--container {
+    margin-top: 2rem;
 }
 
 .home--wrapper {
     min-height: 80vh;
 }
 
-.hometop--leftbox, .about--rightbox, .howwork--leftbox {
+.hometop--content, .about--content, .howwork--content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.hometop--leftbox p, .about--rightbox p, .howwork--leftbox p {
-    margin-bottom: 3rem;
+.hometop--content p, .about--content p, .howwork--content p {
+    margin-bottom: 1rem;
 }
 
 /* Home top box */
@@ -275,9 +283,9 @@ div.connect--container {
 }
 
 /* Footer */
-
 .footer--wrapper {
     background: #a093ff;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .footer--wrapper ul {
@@ -349,7 +357,7 @@ div.connect--container {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Contact Form */
@@ -384,16 +392,16 @@ div.connect--container {
 
 /* Divider */
 .contact--divider {
-    padding: 1rem 0;
     border-top: 5px solid;
     border-image-source: linear-gradient(45deg, #ffb6f9, #a093ff, #b5e5ff, #bfffdd);
     border-image-slice: 1;
     height: 5px;
     width: 90vw;
+    margin: 4rem 0;
 }
 
 .contact--divider__item {
-    margin-top: -36px;
+    margin-top: -0.5rem;
     background: #ffffff;
     font-size: 2rem;
     font-weight: bold;
@@ -422,65 +430,70 @@ div.connect--container {
 }
 
 /* Desktop version */
-@media screen and (min-width: 985px) {
-    /* Header */
-    .header--wrapper {
-        width: 90vw;
-        max-width: 1200px;
-    }
-
-    /* Header Menu */
-    .logo-menu {
-        width: auto;
-    }
-    .logo-menu label {
-        display: none;
-    }
-
-    .header--menu__wrapper {
-        visibility: visible;
-        flex-direction: row;
-        position: static;
-        top: auto;
-        left: auto;
-        padding-bottom: 0;
-        font-size: 1.5rem;
-        width: auto;
-        background: none;
-        box-shadow: none;
-    }
-
-    .header--menu__wrapper li {
-        padding: 0 1.5rem;
-    }
-}
 @media screen and (min-width: 720px) {
     /* MAIN BOX */
     /* Main wrappers & containers */
-    .home--wrapper, .about--wrapper, .howwork--wrapper, .connect--wrapper, .footer--wrapper {
+    .content--wrapper {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home--wrapper, .footer--wrapper {
         display: flex;
         justify-content: center;
     }
-    
-    .home--container, .about--container, .howwork--container, .connect--container, .footer--container {
+
+    .footer--container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         max-width: 1200px;
     }
 
-    .hometop--leftbox, .howwork--leftbox {
+    .about--container, .howwork--container, .connect--container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .howwork--content {
         justify-content: center;
         margin-right: 2rem;
         align-items: flex-start;
     }
-    /* Home box */    
+    /* Home top box */    
     .home--wrapper {
         border-radius: 0 0 25% 0;
     }
+
+    .hometop--content {
+        display: grid;
+        grid-template-columns: 1fr 4rem 1fr;
+        grid-template-areas:
+        "homeheading . homeimg"
+        "hometext . homeimg"
+        "homebtn . homeimg";
+        align-items: center;
+        max-width: 1200px;
+
+    }
+
+    .hometop__heading {
+        grid-area: homeheading;
+    }
+
+    .hometop__text {
+        grid-area: hometext;
+    }
+
+    .hometop__btn {
+        grid-area: homebtn;
+    }
     
     h1.hometop__heading {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .hometop--mobile__img {
@@ -490,11 +503,11 @@ div.connect--container {
     .hometop--desktop__img {
         display: block;
         width: 100%;
-        margin-left: 2rem;
+        grid-area: homeimg;
     }
 
     /* About box */
-    .about--rightbox {
+    .about--content {
         justify-content: center;
         align-items: flex-start;
     }
@@ -547,7 +560,7 @@ div.connect--container {
         border-top: none;
         height: 70vh;
         width: 5px;
-        margin: 0 3rem;
+        margin: 0 4rem;
     }
 
     .contact--divider__item {
@@ -583,5 +596,33 @@ div.connect--container {
 
     .footer--copyright {
         grid-area: copyright;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    /* Header */
+    .header__hamburgericon {
+        display: none;
+    }
+
+    .header--menu {
+        visibility: visible;
+        flex-direction: row;
+        position: static;
+        top: auto;
+        left: auto;
+        padding: 0;
+        font-size: 1.5rem;
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+
+    .header--menu a {
+        padding: 0 1rem;
+    }
+
+    h1.hometop__heading {
+        font-size: 4rem;
     }
 }
