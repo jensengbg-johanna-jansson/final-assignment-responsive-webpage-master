@@ -422,7 +422,7 @@ div.connect--container {
 }
 
 /* Desktop version */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 985px) {
     /* Header */
     .header--wrapper {
         width: 90vw;
@@ -453,7 +453,8 @@ div.connect--container {
     .header--menu__wrapper li {
         padding: 0 1.5rem;
     }
-
+}
+@media screen and (min-width: 720px) {
     /* MAIN BOX */
     /* Main wrappers & containers */
     .home--wrapper, .about--wrapper, .howwork--wrapper, .connect--wrapper, .footer--wrapper {
