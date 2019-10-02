@@ -167,10 +167,15 @@ body {
 .main--wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.home--wrapper, .about--container, .howwork--container, .contact--wrapper {
+.about--container, 
+.howwork--container, 
+.contact--wrapper {
     padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .connect--container {
@@ -179,23 +184,37 @@ body {
 
 .home--wrapper {
     min-height: 80vh;
+    width: 100vw;
+    align-items: center;
+    padding: 2rem 2rem;
 }
 
-.hometop--content, .about--content, .howwork--content {
+.hometop--content, 
+.about--content, 
+.howwork--content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
-.hometop--content p, .about--content p, .howwork--content p {
+.hometop--content p, 
+.about--content p, 
+.howwork--content p {
     margin-bottom: 1rem;
+}
+
+.content--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Home top box */
 .home--wrapper {
     background: linear-gradient(45deg, #ffb6f9, #a093ff, #b5e5ff, #bfffdd);
     border-radius: 0 0 50px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .hometop--desktop__img {
@@ -211,11 +230,6 @@ body {
 }
 
 /* How it works box */
-.howwork--container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
 .howwork--videoContainer {
     position: relative;
     padding-bottom: 56.25%;
@@ -286,6 +300,8 @@ div.connect--container {
 .footer--wrapper {
     background: #a093ff;
     padding: 2rem 2rem 0 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .footer--wrapper ul {
@@ -309,7 +325,8 @@ div.connect--container {
     width: 100%;
 }
 
-.footer--container > section, .footer--container > nav {
+.footer--container > section, 
+.footer--container > nav {
     padding-bottom: 2rem;
 }
 
@@ -349,10 +366,12 @@ div.connect--container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-self: center;
+    justify-content: center;
 }
 
-.contact--socialmedia, .contact--form, .contact--divider {
+.contact--socialmedia, 
+.contact--form, 
+.contact--divider {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -370,7 +389,8 @@ div.connect--container {
     margin: 1rem 0 0.5rem 1rem;
 }
 
-.contact--form input, .contact--form textarea {
+.contact--form input, 
+.contact--form textarea {
     border: 1px solid #ffffff;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -433,36 +453,26 @@ div.connect--container {
 @media screen and (min-width: 720px) {
     /* MAIN BOX */
     /* Main wrappers & containers */
-    .content--wrapper {
+    .home--content, 
+    .content--wrapper,
+    .contact--wrapper,  
+    .footer--container {
         max-width: 1200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
-
-    .home--wrapper, .footer--wrapper {
-        display: flex;
-        justify-content: center;
+    
+    .about--container, 
+    .howwork--container, 
+    .connect--container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 
     .footer--container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        max-width: 1200px;
     }
 
-    .about--container, .howwork--container, .connect--container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    .howwork--content {
-        justify-content: center;
-        margin-right: 2rem;
-        align-items: flex-start;
-    }
     /* Home top box */    
     .home--wrapper {
         border-radius: 0 0 25% 0;
@@ -476,8 +486,6 @@ div.connect--container {
         "hometext . homeimg"
         "homebtn . homeimg";
         align-items: center;
-        max-width: 1200px;
-
     }
 
     .hometop__heading {
@@ -520,8 +528,10 @@ div.connect--container {
         display: none;
     }
 
-    .howwork {
-        flex-direction: row;
+    /* How it works box */
+    .howwork--content {
+        margin-right: 2rem;
+        align-items: flex-start;
     }
 
     /* How to connect box */
@@ -544,15 +554,13 @@ div.connect--container {
     /* CONTACT PAGE */
     .contact--wrapper {
         flex-direction: row-reverse;
-        max-width: 1920px;
         min-height: 85vh;
-        justify-content: center;
     }
 
-    .contact--socialmedia, .contact--form, .contact--divider {
-        justify-content: space-around;
+    .contact--socialmedia, 
+    .contact--form {
         width: auto;
-    }    
+    } 
 
     /* Divider */
     .contact--divider {
