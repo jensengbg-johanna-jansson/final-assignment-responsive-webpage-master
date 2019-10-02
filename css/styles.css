@@ -52,19 +52,6 @@ body {
 }
 
 /* Buttons */
-.btn--filled{
-    width: 100%;
-    background: none;
-    font-weight: bold;
-    padding: 4px;
-    margin: 1rem 0;
-    border-radius: 50px;
-    font-size: 1.7rem;
-    border: 4px solid #ffffff;
-    color: #ffffff;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
 .btn--unfilled {
     width: 100%;
     background: linear-gradient(180deg, #ffb6f9, #a093ff);
@@ -78,13 +65,21 @@ body {
 }
 
 .btn--unfilled:hover {
-    background: none;
+    background: #ffffff;
     color: #ffffff;
-    border: 4px solid #ffffff;
+    cursor: pointer;
 }
 
 .btn--unfilled:hover .btn--unfilled__toplayer {
+    background: #a093ff;
+}
+
+.btn--unfilled:hover span {
     background: none;
+    color: #ffffff;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: #ffffff;
+
 }
 
 .btn--unfilled__toplayer {
@@ -153,6 +148,10 @@ body {
     font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem 0;
+}
+
+.header--menu a:hover {
+    color: #a093ff;
 }
 
 .mobile-menu {
@@ -449,6 +448,10 @@ div.connect--container {
     margin: 0 1rem;
 }
 
+.contact--socialmedia__icons a:hover {
+    color: #a093ff;
+}
+
 /* Desktop version */
 @media screen and (min-width: 720px) {
     /* MAIN BOX */
@@ -609,6 +612,10 @@ div.connect--container {
 
 @media screen and (min-width: 820px) {
     /* Header */
+    .header--wrapper {
+        justify-content: space-around;
+    }
+
     .header__hamburgericon {
         display: none;
     }
